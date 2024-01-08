@@ -86,5 +86,3 @@ elif human == "2" and pc == "2":
 
 else:
   print("Wrong signal, mate")
-  exit()
-exit()
