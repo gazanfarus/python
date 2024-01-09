@@ -34,6 +34,9 @@ for number in range(0, nr_numbers):
   num.append(final_numbers)
 password_list = let + sym + num
 random.shuffle(password_list)
-passwd = ''.join(str(password) for password in password_list)
+#passwd = ''.join(str(password) for password in password_list)
+passwd = ""
+for char in password:
+  passwd += char
 print(passwd)
 
