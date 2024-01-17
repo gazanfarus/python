@@ -17,14 +17,14 @@ def change_color():
     return r, g, b
 
 
-degree = 0
-circles = 10
+def draw_spirograph(offset):
+    for _ in range(int(360 / offset)):
+        tim.color(change_color())
+        tim.circle(100)
+        tim.seth(tim.heading() + offset)
+    tim.color("black")
 
-for _ in range(circles):
-    tim.circle(100)
-    tim.seth(degree)
-    degree += 360/circles
-    tim.color(change_color())
+draw_spirograph(10)
 
 
 screen = Screen()
