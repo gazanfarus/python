@@ -12,6 +12,8 @@ tim = Turtle()
 tim.shape("turtle")
 tim.speed(0)
 tim.penup()
+tim.hideturtle()
+tim.teleport(-150, -150)
 
 # colors = colorgram.extract('image.jpg', 10)
 #
@@ -29,14 +31,13 @@ def change_color():
     return random.choice(color_list)
 
 
-y_axis = 30
+y_axis = -120
 for _ in range(10):
     for _ in range(10):
         tim.dot(20, change_color())
         tim.forward(30)
-    tim.teleport(0, y_axis)
+    tim.teleport(-150, y_axis)
     y_axis += 30
-tim.hideturtle()
 
 
 screen = Screen()
