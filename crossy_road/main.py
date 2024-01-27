@@ -26,11 +26,13 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+    cars.create_car()
     cars.move(score.level)
 
-    if player.distance(cars) < 30:
-        game_is_on = False
-        score.game_over()
+    for car in cars.all_cars:
+        if player.distance(car) < 30:
+            game_is_on = False
+            score.game_over()
 
     if player.ycor() > 260:
         score.next_level()
