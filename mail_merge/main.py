@@ -13,6 +13,7 @@ with open("./Input/Names/invited_names.txt", mode="r") as names:
         name = name.strip()
         with open("./Input/Letters/starting_letter.txt", mode="r") as starting_letter:
             letter = starting_letter.read()
-            new_letter = letter.replace("[name]", f"{name}")
-            with open(f"./Output/ReadyToSend/letter_to_{name}", mode="w") as final_letters:
-                final_letters.write(new_letter)
+            letter = letter.replace("[name]", f"{name}")
+            letter = letter.replace("Angela", "Gazanfar")
+            with open(f"./Output/ReadyToSend/letter_to_{name}.txt", mode="w") as final_letters:
+                final_letters.write(letter)
