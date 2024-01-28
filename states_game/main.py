@@ -32,5 +32,5 @@ while game_is_on:
         print("\nWell done! You've named all of the US states!")
         game_is_on = False
 
-forgotten_states = [state for state in states_list if state not in guessed_states]
-pandas.DataFrame(forgotten_states).to_csv("forgotten_states.cvs")
+missing_states = [state for state in states_list if state not in guessed_states]
+pandas.DataFrame(missing_states).to_csv("forgotten_states.cvs")
