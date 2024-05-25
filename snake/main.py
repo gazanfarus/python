@@ -41,4 +41,5 @@ while game_is_on:
             score.reset_score()
             snake.reset_snake()
 
+#fix for screen flickering
 screen.exitonclick()
